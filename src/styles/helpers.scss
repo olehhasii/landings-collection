@@ -1,0 +1,16 @@
+$color-primary: #252525;
+
+@mixin base_btn($background: $color-primary, $textcolor: #ffffff, $border-radius: 16px, $font-size: 18px) {
+  background-color: $background;
+  color: $textcolor;
+  border-radius: $border-radius;
+  font-size: $font-size;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@function toRem($value) {
+  $remValue: calc($value / 16) + rem;
+  @return $remValue;
+}

@@ -1,0 +1,47 @@
+@import "../../../styles/helpers.scss";
+
+$color-primary: #252525;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin: toRem(24) auto 0 auto;
+
+  &_heading {
+    text-align: center;
+    color: $color-primary;
+    font-size: toRem(64);
+  }
+
+  &_text {
+    text-align: center;
+    color: $color-primary;
+    opacity: 0.8;
+    font-size: toRem(26);
+  }
+
+  &_btn {
+    @include base_btn;
+    padding: 18px 48px;
+    margin-top: toRem(16);
+  }
+}
+
+.grid {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  margin: toRem(24) auto 0 auto;
+  grid-template-columns: repeat(4, 400px);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+
+  &_image {
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,16 @@
+$white-color: #ffffff;
+
+$font-b612: "B612", sans-serif;
+
+@mixin landing_theme($font, $background: $white-color) {
+  font-family: $font;
+  background-color: $background;
+  height: 100%;
+  width: 100%;
+}
+
+.landing {
+  &_beauty {
+    @include landing_theme($font: $font-b612);
+  }
+}
