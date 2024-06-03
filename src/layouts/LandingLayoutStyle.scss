@@ -1,3 +1,5 @@
+@import "../styles/helpers.scss";
+
 $white-color: #ffffff;
 
 $font-b612: "B612", sans-serif;
@@ -11,6 +13,7 @@ $font-b612: "B612", sans-serif;
 
 .landing {
   &_beauty {
+    padding: toRem(36) toRem(48);
     @include landing_theme($font: $font-b612);
   }
 }
