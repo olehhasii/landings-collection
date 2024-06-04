@@ -7,13 +7,21 @@ $color-primary: #252525;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 40%;
   margin: 0 auto 0 auto;
+
+  @include breakpoint(large) {
+    width: 100%;
+  }
 
   &_heading {
     text-align: center;
     color: $color-primary;
     font-size: toRem(64);
+
+    @include breakpoint(small) {
+      font-size: toRem(48);
+    }
   }
 
   &_text {
@@ -21,6 +29,10 @@ $color-primary: #252525;
     color: $color-primary;
     opacity: 0.8;
     font-size: toRem(26);
+
+    @include breakpoint(small) {
+      font-size: toRem(18);
+    }
   }
 
   &_btn {
@@ -39,6 +51,10 @@ $color-primary: #252525;
   grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
 
+  @include breakpoint(small) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   &_image {
     //width: 400px;
     width: 100%;
@@ -50,18 +66,44 @@ $color-primary: #252525;
 .second {
   margin-top: toRem(96);
 
+  @include breakpoint(medium) {
+    margin-top: toRem(48);
+  }
+
   &_wrapper {
     display: flex;
+
+    @include breakpoint(medium) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &_content {
     width: 35%;
-    margin-right: toRem(12);
+    margin-right: toRem(64);
     margin-top: toRem(124);
+
+    @include breakpoint(large) {
+      width: 50%;
+      margin-top: toRem(64);
+    }
+
+    @include breakpoint(medium) {
+      margin-right: 0;
+      margin-top: 0;
+      width: 100%;
+    }
+
     &_heading {
       text-align: left;
       color: $color-primary;
       font-size: toRem(56);
+
+      @include breakpoint(medium) {
+        text-align: center;
+      }
     }
 
     &_text {
@@ -70,12 +112,23 @@ $color-primary: #252525;
       color: $color-primary;
       opacity: 0.8;
       font-size: toRem(26);
+
+      @include breakpoint(medium) {
+        text-align: center;
+        width: 100%;
+      }
     }
 
     &_btn {
       @include base_btn;
       padding: 18px 48px;
       margin-top: toRem(24);
+
+      @include breakpoint(medium) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 
@@ -84,7 +137,15 @@ $color-primary: #252525;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 0.2fr 1fr 0.2fr;
     grid-gap: 30px;
-    width: 70%;
+    width: 50%;
+
+    @include breakpoint(large) {
+      width: 80%;
+    }
+
+    @include breakpoint(medium) {
+      display: none;
+    }
 
     &_left {
       width: 100%;
@@ -105,6 +166,12 @@ $color-primary: #252525;
     justify-content: space-between;
     gap: 80px;
     margin-top: toRem(48);
+
+    @include breakpoint(small) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
     &_block {
       display: flex;
       flex-direction: column;
