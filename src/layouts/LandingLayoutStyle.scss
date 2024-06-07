@@ -21,4 +21,14 @@ $font-b612: "B612", sans-serif;
 
     @include landing_theme($font: $font-b612);
   }
+
+  &_justthatsimple {
+    padding: toRem(36) toRem(48);
+
+    @include breakpoint(small) {
+      padding: toRem(24);
+    }
+
+    @include landing_theme($font: $font-b612);
+  }
 }

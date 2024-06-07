@@ -1,4 +1,4 @@
-import BeautyLandingContent from "../components/Content/BeautyLanding/BeautyLandingContent";
+import BeautyLandingContent from "../components/BeautyLanding/BeautyLandingContent";
 import LandingLayout from "../layouts/LandingLayout";
 
 const Beauty = () => {

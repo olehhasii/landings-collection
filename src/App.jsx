@@ -1,9 +1,11 @@
 import Beauty from "./landings/Beauty";
+import Nextcent from "./landings/Nextcent";
 
 function App() {
   return (
     <>
-      <Beauty />
+      {/* <Beauty /> */}
+      <Nextcent />
     </>
   );
 }
