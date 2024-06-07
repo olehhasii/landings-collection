@@ -1,0 +1,50 @@
+@import "../../styles/helpers.scss";
+@import "../../styles/nextcent.var.scss";
+
+.header {
+  padding: toRem(30) toRem(144);
+  background-color: $color-neutral-silver;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 84px;
+  &_nav {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+
+    &_link {
+      a {
+        @include typography(md);
+        color: $color-secondary;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &_login {
+    color: $color-primary-green;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-right: toRem(20);
+    padding: toRem(12) toRem(24);
+    border-radius: 6px;
+    transition: 0.3s;
+    @include typography(md, 500);
+
+    @include hover {
+      background-color: $color-tint5;
+    }
+  }
+
+  &_signup {
+    border: none;
+    background-color: $color-primary-green;
+    color: $color-white;
+    cursor: pointer;
+    padding: toRem(12) toRem(24);
+    border-radius: 6px;
+    @include typography(md, 500);
+  }
+}

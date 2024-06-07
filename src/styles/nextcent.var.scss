@@ -1,4 +1,4 @@
-$color-primary-green: #28cb8b;
+$color-primary-green: #4caf4f;
 $color-secondary: #263238;
 $color-info: #2194f3;
 $color-white: #ffffff;
@@ -14,57 +14,61 @@ $color-warning: #fbc02d;
 $color-error: #e53835;
 $color-sucess: #2e7d31;
 
+$color-tint5: #e8f5e9;
+
 $typography-sizes: (
   xs: (
-    12px,
-    16px,
+    font-size: 12px,
+    line-height: 16px,
   ),
   s: (
-    14px,
-    20px,
+    font-size: 14px,
+    line-height: 20px,
   ),
   md: (
-    16px,
-    24px,
+    font-size: 16px,
+    line-height: 24px,
   ),
   lg: (
-    18px,
-    28px,
+    font-size: 18px,
+    line-height: 28px,
   ),
 );
 
 $heading-sizes: (
   xs: (
-    20px,
-    28px,
+    font-size: 20px,
+    line-height: 28px,
   ),
   s: (
-    28px,
-    36px,
+    font-size: 28px,
+    line-height: 36px,
   ),
   md: (
-    36px,
-    44px,
+    font-size: 36px,
+    line-height: 44px,
   ),
   lg: (
-    64px,
-    76px,
+    font-size: 64px,
+    line-height: 76px,
   ),
 );
 
 @mixin typography($size, $font-weight: normal) {
-  $font-size: map-get(map-get($typography-sizes, $size), 0);
-  $line-height: map-get(map-get($typography-sizes, $size), 1);
+  $font-size: map-get(map-get($typography-sizes, $size), font-size);
+  $line-height: map-get(map-get($typography-sizes, $size), line-height);
 
+  font-family: "Inter", sans-serif;
   font-size: $font-size;
   line-height: $line-height;
   font-weight: $font-weight;
 }
 
 @mixin heading($size) {
-  $font-size: map-get(map-get($heading-sizes, $size), 0);
-  $line-height: map-get(map-get($heading-sizes, $size), 1);
+  $font-size: map-get(map-get($heading-sizes, $size), font-size);
+  $line-height: map-get(map-get($heading-sizes, $size), line-height);
 
+  font-family: "Inter", sans-serif;
   font-size: $font-size;
   line-height: $line-height;
   font-weight: 600;
