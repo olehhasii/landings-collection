@@ -24,13 +24,9 @@
 
   &_login {
     color: $color-primary-green;
-    border: none;
-    background: transparent;
-    cursor: pointer;
     margin-right: toRem(20);
-    padding: toRem(12) toRem(24);
-    border-radius: 6px;
-    transition: 0.3s;
+
+    @include basebtn(transparent);
     @include typography(md, 500);
 
     @include hover {
@@ -39,12 +35,46 @@
   }
 
   &_signup {
-    border: none;
-    background-color: $color-primary-green;
     color: $color-white;
-    cursor: pointer;
-    padding: toRem(12) toRem(24);
-    border-radius: 6px;
+
+    @include basebtn();
     @include typography(md, 500);
+  }
+}
+
+.hero {
+  background-color: $color-neutral-silver;
+  padding: toRem(96) toRem(144);
+  display: flex;
+  /*  justify-content: space-between; */
+
+  &_heading {
+    color: $color-neutral-dark-grey;
+    @include heading(lg);
+
+    span {
+      color: $color-primary-green;
+    }
+  }
+
+  &_text {
+    color: $color-neutral-grey;
+    margin-top: toRem(16);
+
+    @include typography(md);
+  }
+
+  &_btn {
+    color: $color-white;
+    margin-top: toRem(32);
+
+    @include typography(md, 500);
+    @include basebtn($color-primary-green, 6px, toRem(14), toRem(32));
+  }
+  &_img {
+    margin-left: toRem(504);
+    img {
+      width: 500px;
+    }
   }
 }

@@ -73,3 +73,11 @@ $heading-sizes: (
   line-height: $line-height;
   font-weight: 600;
 }
+
+@mixin basebtn($background: $color-primary-green, $radius: 6px, $padY: toRem(10), $padX: toRem(20)) {
+  border: none;
+  background: $background;
+  cursor: pointer;
+  padding: $padY $padX;
+  border-radius: $radius;
+}
