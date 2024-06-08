@@ -46,7 +46,7 @@
   background-color: $color-neutral-silver;
   padding: toRem(96) toRem(144);
   display: flex;
-  /*  justify-content: space-between; */
+  /* justify-content: space-between; */
 
   &_heading {
     color: $color-neutral-dark-grey;
@@ -72,9 +72,111 @@
     @include basebtn($color-primary-green, 6px, toRem(14), toRem(32));
   }
   &_img {
-    margin-left: toRem(504);
+    margin-left: 40%;
+  }
+}
+
+.community {
+  padding: toRem(42) toRem(144);
+
+  &_heading {
+    color: $color-neutral-dark-grey;
+    text-align: center;
+    @include heading(md);
+  }
+
+  &_text {
+    color: $color-neutral-grey;
+    margin-top: toRem(8);
+    text-align: center;
+    @include typography(md);
+  }
+
+  &_imgs {
+    padding: toRem(20) 0;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: toRem(40);
+  }
+
+  &_card {
+    padding: toRem(24) toRem(32);
+    max-width: 300px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 8px;
+    &_heading {
+      color: $color-neutral-dark-grey;
+      text-align: center;
+      margin-top: toRem(16);
+      @include heading(s);
+    }
+
+    &_text {
+      color: $color-neutral-grey;
+      text-align: center;
+      margin-top: toRem(8);
+      @include typography(md);
+    }
+    &_logo {
+      position: relative;
+      img {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        z-index: 10;
+      }
+    }
+    &_back {
+      width: 50px;
+      height: 50px;
+      background-color: $color-tint5;
+      position: absolute;
+      border-radius: 6px;
+      border-top-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+      z-index: 1;
+      top: 0;
+      right: 80px;
+    }
+  }
+  &_cards {
+    margin-top: toRem(16);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_end {
+    display: flex;
+    justify-content: space-between;
+    margin-top: toRem(42);
+
     img {
+      padding: toRem(52) 0;
       width: 500px;
+    }
+
+    div {
+      margin-top: toRem(80);
+      width: 50%;
+    }
+
+    &_heading {
+      color: $color-neutral-dark-grey;
+      @include heading(md);
+    }
+
+    &_text {
+      color: $color-neutral-grey;
+      margin-top: toRem(16);
+      @include typography(s);
+    }
+
+    button {
+      color: $color-white;
+      margin-top: toRem(32);
+      @include typography(md, 500);
+      @include basebtn();
     }
   }
 }
