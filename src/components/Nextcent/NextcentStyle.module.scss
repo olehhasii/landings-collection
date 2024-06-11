@@ -180,3 +180,100 @@
     }
   }
 }
+
+.stats {
+  background-color: $color-neutral-silver;
+  padding: toRem(64) toRem(144);
+  display: flex;
+  justify-content: space-between;
+  &_heading {
+    color: $color-neutral-dark-grey;
+    @include heading(md);
+    span {
+      color: $color-primary-green;
+    }
+  }
+
+  &_text {
+    color: $color-neutral-grey;
+    margin-top: toRem(8);
+    @include typography(md);
+  }
+  &_info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 50%;
+    &_item {
+      display: flex;
+      align-items: center;
+      width: 40%;
+      div {
+        display: flex;
+        flex-direction: column;
+        margin-left: toRem(16);
+      }
+
+      img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    &_value {
+      color: $color-neutral-dark-grey;
+      @include heading(s);
+    }
+
+    &_name {
+      color: $color-neutral-grey;
+      @include typography(md);
+    }
+  }
+}
+
+.body {
+  &_content {
+    padding: toRem(48) toRem(144);
+  }
+
+  &_end {
+    background-color: $color-neutral-silver;
+    padding: toRem(33) toRem(144) toRem(33) 40%;
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &_text {
+      color: $color-neutral-grey;
+      @include typography(md);
+    }
+
+    &_author {
+      color: $color-primary-green;
+      margin-top: toRem(16);
+      @include heading(xs);
+    }
+
+    &_comp {
+      color: $color-neutral-light-grey;
+      margin-top: toRem(8);
+      @include typography(md);
+    }
+
+    &_logos {
+      margin-top: toRem(32);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 41px;
+
+      li a {
+        color: $color-primary-green;
+        @include heading(s);
+      }
+    }
+  }
+}
