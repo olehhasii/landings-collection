@@ -277,3 +277,148 @@
     }
   }
 }
+
+.ending {
+  padding-top: toRem(42);
+  &_heading {
+    color: $color-neutral-dark-grey;
+    text-align: center;
+    @include heading(md);
+  }
+
+  &_text {
+    color: $color-neutral-grey;
+    text-align: center;
+    width: 30%;
+    display: block;
+    margin: toRem(8) auto 0 auto;
+    @include typography(md);
+  }
+
+  &_cards {
+    display: flex;
+    justify-content: center;
+    margin-top: toRem(200);
+    gap: toRem(80);
+    margin-bottom: toRem(90);
+  }
+
+  &_card {
+    background-color: $color-neutral-silver;
+    padding: toRem(16);
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: toRem(16);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 10px;
+    h3 {
+      color: $color-neutral-grey;
+      text-align: center;
+      @include heading(xs);
+    }
+
+    a {
+      color: $color-primary-green;
+      @include heading(xs);
+    }
+  }
+
+  &_demo {
+    background-color: $color-neutral-silver;
+    padding: toRem(32) 0;
+
+    h2 {
+      color: $color-secondary;
+      text-align: center;
+      @include heading(lg);
+    }
+
+    button {
+      margin: toRem(32) auto 0 auto;
+      display: block;
+      color: $color-white;
+      @include typography(md);
+      @include basebtn();
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-neutral-black;
+  padding: toRem(64) toRem(165);
+  &_logo {
+    margin-bottom: toRem(40);
+  }
+  &_copyright {
+    span {
+      color: $color-neutral-silver;
+      margin-bottom: toRem(8);
+      @include typography(s);
+    }
+  }
+  &_logos {
+    display: flex;
+    gap: toRem(20);
+    margin-top: toRem(40);
+    &_logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: toRem(8);
+      border-radius: 100%;
+      background-color: $color-neutral-dark-grey;
+    }
+  }
+
+  &_nav {
+    display: flex;
+    gap: toRem(30);
+
+    span {
+      margin-bottom: toRem(24);
+      color: $color-white;
+      @include heading(xs);
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: toRem(12);
+      li {
+        a {
+          text-decoration: none;
+          color: $color-neutral-silver;
+          @include typography(md);
+        }
+      }
+    }
+  }
+
+  &_email {
+    padding: toRem(12);
+    background-color: $color-neutral-dark-grey;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    input {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      color: $color-neutral-silver;
+      margin-right: toRem(10);
+      @include typography(s);
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
