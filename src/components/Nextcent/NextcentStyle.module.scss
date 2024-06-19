@@ -8,10 +8,19 @@
   justify-content: space-between;
   align-items: center;
   max-height: 84px;
+
+  @include breakpoint(small) {
+    padding: toRem(20) toRem(44);
+  }
+
   &_nav {
     list-style: none;
     display: flex;
     gap: 50px;
+
+    @include breakpoint(large) {
+      display: none;
+    }
 
     &_link {
       a {
@@ -44,13 +53,22 @@
 
 .hero {
   background-color: $color-neutral-silver;
-  padding: toRem(96) toRem(144);
+  padding: toRem(20) toRem(44);
   display: flex;
   /* justify-content: space-between; */
+
+  @include breakpoint(small) {
+    padding: toRem(20) toRem(44);
+    flex-direction: column-reverse;
+  }
 
   &_heading {
     color: $color-neutral-dark-grey;
     @include heading(lg);
+
+    @include breakpoint(small) {
+      text-align: center;
+    }
 
     span {
       color: $color-primary-green;
@@ -61,6 +79,10 @@
     color: $color-neutral-grey;
     margin-top: toRem(16);
 
+    @include breakpoint(small) {
+      text-align: center;
+    }
+
     @include typography(md);
   }
 
@@ -68,16 +90,48 @@
     color: $color-white;
     margin-top: toRem(32);
 
+    @include breakpoint(small) {
+      display: block;
+      margin: toRem(32) auto 0 auto;
+    }
+
     @include typography(md, 500);
     @include basebtn($color-primary-green, 6px, toRem(14), toRem(32));
   }
   &_img {
     margin-left: 40%;
+
+    @include breakpoint(large) {
+      margin-left: 0;
+    }
+
+    @include breakpoint(small) {
+      margin-left: 0;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 
 .community {
   padding: toRem(42) toRem(144);
+
+  @include breakpoint(medium) {
+    padding: toRem(20) toRem(44);
+  }
+
+  @include breakpoint(large) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include breakpoint(small) {
+    display: block;
+  }
 
   &_heading {
     color: $color-neutral-dark-grey;
@@ -98,6 +152,11 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: toRem(40);
+
+    @include breakpoint(small) {
+      flex-wrap: wrap;
+      gap: toRem(20);
+    }
   }
 
   &_card {
@@ -105,11 +164,24 @@
     max-width: 300px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 8px;
+
+    @include breakpoint(large) {
+      max-width: 100%;
+    }
+
+    @include breakpoint(small) {
+      max-width: 300px;
+    }
+
     &_heading {
       color: $color-neutral-dark-grey;
       text-align: center;
       margin-top: toRem(16);
       @include heading(s);
+
+      @include breakpoint(medium) {
+        @include heading(xs);
+      }
     }
 
     &_text {
@@ -117,6 +189,10 @@
       text-align: center;
       margin-top: toRem(8);
       @include typography(md);
+
+      @include breakpoint(medium) {
+        @include typography(s);
+      }
     }
     &_logo {
       position: relative;
@@ -144,6 +220,15 @@
     margin-top: toRem(16);
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint(large) {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    @include breakpoint(small) {
+      flex-direction: column;
+    }
   }
 
   &_end {
@@ -151,14 +236,30 @@
     justify-content: space-between;
     margin-top: toRem(42);
 
+    @include breakpoint(small) {
+      flex-direction: column;
+    }
+
     img {
       padding: toRem(52) 0;
       width: 500px;
+
+      @include breakpoint(large) {
+        width: 300px;
+      }
+
+      @include breakpoint(small) {
+        width: 100%;
+      }
     }
 
     div {
       margin-top: toRem(80);
       width: 50%;
+      @include breakpoint(small) {
+        margin-top: toRem(40);
+        width: 100%;
+      }
     }
 
     &_heading {
@@ -177,6 +278,10 @@
       margin-top: toRem(32);
       @include typography(md, 500);
       @include basebtn();
+      @include breakpoint(small) {
+        display: block;
+        margin: toRem(32) auto 0 auto;
+      }
     }
   }
 }
@@ -186,9 +291,25 @@
   padding: toRem(64) toRem(144);
   display: flex;
   justify-content: space-between;
+
+  @include breakpoint(large) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include breakpoint(small) {
+    padding: toRem(20) toRem(44);
+    flex-direction: column;
+  }
+
   &_heading {
     color: $color-neutral-dark-grey;
     @include heading(md);
+
+    @include breakpoint(small) {
+      text-align: center;
+    }
+
     span {
       color: $color-primary-green;
     }
@@ -197,6 +318,11 @@
   &_text {
     color: $color-neutral-grey;
     margin-top: toRem(8);
+
+    @include breakpoint(small) {
+      text-align: center;
+    }
+
     @include typography(md);
   }
   &_info {
@@ -204,10 +330,28 @@
     flex-wrap: wrap;
     gap: 30px;
     width: 50%;
+
+    @include breakpoint(large) {
+      justify-content: center;
+      gap: 50px;
+    }
+
+    @include breakpoint(small) {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
     &_item {
       display: flex;
       align-items: center;
       width: 40%;
+
+      @include breakpoint(small) {
+        width: 100%;
+        justify-content: center;
+      }
+
       div {
         display: flex;
         flex-direction: column;
@@ -235,11 +379,23 @@
 .body {
   &_content {
     padding: toRem(48) toRem(144);
+
+    @include breakpoint(large) {
+      padding: toRem(20) toRem(44);
+    }
+
+    @include breakpoint(small) {
+      padding: toRem(20) toRem(44);
+    }
   }
 
   &_end {
     background-color: $color-neutral-silver;
     padding: toRem(33) toRem(144) toRem(33) 40%;
+
+    @include breakpoint(large) {
+      padding: toRem(20) toRem(44);
+    }
 
     &_content {
       display: flex;
@@ -270,6 +426,11 @@
       align-items: center;
       gap: 41px;
 
+      @include breakpoint(small) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
       li a {
         color: $color-primary-green;
         @include heading(s);
@@ -289,7 +450,7 @@
   &_text {
     color: $color-neutral-grey;
     text-align: center;
-    width: 30%;
+    /*  width: 30%; */
     display: block;
     margin: toRem(8) auto 0 auto;
     @include typography(md);
@@ -301,6 +462,12 @@
     margin-top: toRem(200);
     gap: toRem(80);
     margin-bottom: toRem(90);
+
+    @include breakpoint(small) {
+      margin-top: toRem(40);
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &_card {
@@ -334,6 +501,10 @@
       color: $color-secondary;
       text-align: center;
       @include heading(lg);
+
+      @include breakpoint(small) {
+        @include heading(md);
+      }
     }
 
     button {
@@ -351,6 +522,13 @@
   justify-content: space-between;
   background-color: $color-neutral-black;
   padding: toRem(64) toRem(165);
+
+  @include breakpoint(small) {
+    padding: toRem(20) toRem(44);
+    flex-direction: column;
+    align-items: center;
+  }
+
   &_logo {
     margin-bottom: toRem(40);
   }
@@ -378,6 +556,13 @@
   &_nav {
     display: flex;
     gap: toRem(30);
+
+    @include breakpoint(small) {
+      margin-top: toRem(20);
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
 
     span {
       margin-bottom: toRem(24);
