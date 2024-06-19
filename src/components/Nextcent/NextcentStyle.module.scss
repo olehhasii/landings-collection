@@ -9,8 +9,14 @@
   align-items: center;
   max-height: 84px;
 
-  @include breakpoint(small) {
+  @include breakpoint(medium) {
     padding: toRem(20) toRem(44);
+  }
+
+  @include breakpoint(small) {
+    img {
+      width: 100px;
+    }
   }
 
   &_nav {
@@ -41,6 +47,12 @@
     @include hover {
       background-color: $color-tint5;
     }
+
+    @include breakpoint(small) {
+      margin-right: toRem(10);
+      padding: 10px 15px;
+      @include typography(s, 500);
+    }
   }
 
   &_signup {
@@ -48,6 +60,11 @@
 
     @include basebtn();
     @include typography(md, 500);
+    @include breakpoint(small) {
+      margin-right: toRem(10);
+      padding: 10px 15px;
+      @include typography(s, 500);
+    }
   }
 }
 
@@ -56,6 +73,10 @@
   padding: toRem(20) toRem(44);
   display: flex;
   /* justify-content: space-between; */
+
+  @include breakpoint(medium) {
+    align-items: center;
+  }
 
   @include breakpoint(small) {
     padding: toRem(20) toRem(44);
@@ -103,6 +124,12 @@
 
     @include breakpoint(large) {
       margin-left: 0;
+    }
+
+    @include breakpoint(medium) {
+      img {
+        width: 300px;
+      }
     }
 
     @include breakpoint(small) {
@@ -214,6 +241,10 @@
       z-index: 1;
       top: 0;
       right: 80px;
+
+      @include breakpoint(large) {
+        right: 43%;
+      }
     }
   }
   &_cards {
@@ -223,11 +254,14 @@
 
     @include breakpoint(large) {
       flex-wrap: wrap;
+      justify-content: center;
       gap: 30px;
     }
 
     @include breakpoint(small) {
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -295,6 +329,7 @@
   @include breakpoint(large) {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   @include breakpoint(small) {
@@ -426,6 +461,10 @@
       align-items: center;
       gap: 41px;
 
+      @include breakpoint(medium) {
+        flex-wrap: wrap;
+      }
+
       @include breakpoint(small) {
         flex-wrap: wrap;
         justify-content: center;
@@ -523,7 +562,11 @@
   background-color: $color-neutral-black;
   padding: toRem(64) toRem(165);
 
-  @include breakpoint(small) {
+  @include breakpoint(large) {
+    flex-wrap: wrap;
+  }
+
+  @include breakpoint(medium) {
     padding: toRem(20) toRem(44);
     flex-direction: column;
     align-items: center;
