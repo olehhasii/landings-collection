@@ -1,0 +1,70 @@
+$color-primary-green: #b9ff66;
+$color-primary-black: #191a23;
+$color-primary-grey: #f3f3f3;
+$color-black: #000000;
+
+$typography-sizes: (
+  h1: (
+    font-size: 60px,
+    font-weight: 500,
+  ),
+  h2: (
+    font-size: 40px,
+    font-weight: 500,
+  ),
+  h3: (
+    font-size: 30px,
+    font-weight: 500,
+  ),
+  h4: (
+    font-size: 20px,
+    font-weight: 500,
+  ),
+  h1mob: (
+    font-size: 43px,
+    font-weight: 500,
+  ),
+  h2mob: (
+    font-size: 36px,
+    font-weight: 500,
+  ),
+  h3mob: (
+    font-size: 26px,
+    font-weight: 500,
+  ),
+  h4mob: (
+    font-size: 18px,
+    font-weight: 500,
+  ),
+  p: (
+    font-size: 18px,
+    font-weight: 400,
+  ),
+  pmob: (
+    font-size: 16px,
+    font-weight: 400,
+  ),
+  regular: (
+    font-size: 20px,
+    font-weight: 400,
+  ),
+);
+
+@mixin typography($size, $color: $color-black) {
+  $font-size: map-get(map-get($typography-sizes, $size), font-size);
+  $font-weight: map-get(map-get($typography-sizes, $size), font-weight);
+
+  color: $color;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: $font-size;
+  line-height: auto;
+  font-weight: $font-weight;
+}
+
+@mixin basebtn($background: $color-primary-black) {
+  border: 1px solid $color-primary-black;
+  background-color: $background;
+  cursor: pointer;
+  padding: toRem(20) toRem(35);
+  border-radius: 14px;
+}

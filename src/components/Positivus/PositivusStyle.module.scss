@@ -1,0 +1,87 @@
+@import "../../styles/helpers.scss";
+@import "../../styles/positivus.var.scss";
+
+.header {
+  margin-top: toRem(60);
+  padding: 0 toRem(100) 0 toRem(100);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &_nav {
+    display: flex;
+    align-items: center;
+    gap: toRem(40);
+    list-style: none;
+
+    &_item {
+      a {
+        text-decoration: none;
+        @include typography(regular);
+      }
+      button {
+        @include typography(regular);
+        @include basebtn(#ffffff);
+      }
+    }
+  }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 100px;
+  margin-top: toRem(70);
+  padding: 0 toRem(100) 0 toRem(100);
+
+  &_content {
+    h1 {
+      @include typography(h1);
+    }
+
+    p {
+      margin-top: toRem(35);
+      @include typography(regular);
+    }
+
+    button {
+      margin-top: toRem(35);
+      @include typography(regular, #ffffff);
+      @include basebtn();
+    }
+  }
+
+  &_illustration {
+    display: flex;
+    justify-content: center;
+  }
+
+  &_logos {
+    margin-top: toRem(70);
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.sectionHeading {
+  margin-top: toRem(120);
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  h2 {
+    background-color: $color-primary-green;
+    padding: 0 toRem(7) 0 toRem(7);
+    border-radius: 8px;
+    @include typography(h2);
+  }
+  p {
+    width: 25%;
+    @include typography(p);
+  }
+}
+
+.services {
+  padding: 0 toRem(100) 0 toRem(100);
+}
