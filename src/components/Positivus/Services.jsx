@@ -8,17 +8,17 @@ import Illust4 from "../../assets/Positivus/Illust4.png";
 import Illust5 from "../../assets/Positivus/Illust5.png";
 import Illust6 from "../../assets/Positivus/Illust6.png";
 
-const Card = ({ heading, img }) => {
+const Card = ({ heading, img, linkColor, lableColor }) => {
   return (
     <div className={styles.services_card}>
       <div>
-        <h3 className={styles.services_card_heading}>{heading}</h3>
+        <h3 className={`${styles.services_card_heading} ${lableColor}`}>{heading}</h3>
         <div>
           <a href="#" className={styles.services_card_link}>
             <div className={styles.services_card_link_icon}>
               <img src={arrow} alt="link" />
             </div>
-            <span>Learn more</span>
+            <span className={linkColor}>Learn more</span>
           </a>
         </div>
       </div>
@@ -31,12 +31,48 @@ const Card = ({ heading, img }) => {
 
 const Services = () => {
   const cards = [
-    { id: 1, heading: "Search engine optimization", img: Illust1 },
-    { id: 2, heading: "Pay-per-click advertising", img: Illust2 },
-    { id: 3, heading: "Social Media Marketing", img: Illust3 },
-    { id: 4, heading: "Email Marketing", img: Illust4 },
-    { id: 5, heading: "Content Creation", img: Illust5 },
-    { id: 6, heading: "Analytics and Tracking", img: Illust6 },
+    {
+      id: 1,
+      heading: "Search engine optimization",
+      img: Illust1,
+      lableColor: styles.services_card_heading_green,
+      linkColor: styles.services_card_link_black,
+    },
+    {
+      id: 2,
+      heading: "Pay-per-click advertising",
+      img: Illust2,
+      lableColor: styles.services_card_heading_white,
+      linkColor: styles.services_card_link_black,
+    },
+    {
+      id: 3,
+      heading: "Social Media Marketing",
+      img: Illust3,
+      lableColor: styles.services_card_heading_green,
+      linkColor: styles.services_card_link_white,
+    },
+    {
+      id: 4,
+      heading: "Email Marketing",
+      img: Illust4,
+      lableColor: styles.services_card_heading_green,
+      linkColor: styles.services_card_link_black,
+    },
+    {
+      id: 5,
+      heading: "Content Creation",
+      img: Illust5,
+      lableColor: styles.services_card_heading_white,
+      linkColor: styles.services_card_link_black,
+    },
+    {
+      id: 6,
+      heading: "Analytics and Tracking",
+      img: Illust6,
+      lableColor: styles.services_card_heading_green,
+      linkColor: styles.services_card_link_white,
+    },
   ];
 
   return (
@@ -47,7 +83,13 @@ const Services = () => {
       />
       <div className={styles.services_cards}>
         {cards.map((card) => (
-          <Card heading={card.heading} key={card.id} img={card.img} />
+          <Card
+            heading={card.heading}
+            key={card.id}
+            img={card.img}
+            lableColor={card.lableColor}
+            linkColor={card.linkColor}
+          />
         ))}
       </div>
     </section>

@@ -98,14 +98,19 @@
     display: flex;
     justify-content: space-between;
     gap: 70px;
+    box-shadow: 0 8px 2px -2px black;
+    border: 1px solid black;
 
     &_heading {
       max-width: 230px;
       border-radius: 8px;
       padding: 0 toRem(8) 0 toRem(8);
       @include typography(h3);
-      &:nth-child(3n + 1) {
+      &_green {
         background-color: $color-primary-green;
+      }
+      &_white {
+        background-color: #ffffff;
       }
     }
 
@@ -124,8 +129,12 @@
         background-color: #ffffff;
         margin-right: toRem(15);
       }
-      span {
+      &_black {
         @include typography(regular);
+      }
+
+      &_white {
+        @include typography(regular, #ffffff);
       }
     }
 
