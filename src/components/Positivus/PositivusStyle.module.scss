@@ -151,3 +151,39 @@
     }
   }
 }
+
+.studies {
+  padding: 0 toRem(100) 0 toRem(100);
+
+  &_wrapper {
+    margin-top: toRem(80);
+    background-color: $color-primary-black;
+    border-radius: 45px;
+    padding: toRem(70) toRem(60);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_item {
+    border-right: 1px solid white;
+    padding-right: toRem(64);
+    padding-left: toRem(64);
+
+    p {
+      @include typography(p, #ffffff);
+    }
+
+    a {
+      margin-top: toRem(20);
+      display: flex;
+      align-items: center;
+      gap: toRem(15);
+      text-decoration: none;
+      @include typography(regular, $color-primary-green);
+    }
+  }
+
+  &_item:last-child {
+    border-right: none;
+  }
+}
