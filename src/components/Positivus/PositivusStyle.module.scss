@@ -269,3 +269,56 @@
     @include typography(p);
   }
 }
+
+.team {
+  padding: 0 toRem(100) 0 toRem(100);
+
+  &_members {
+    margin-top: toRem(80);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: toRem(40);
+  }
+}
+
+.employee {
+  padding: toRem(40) toRem(35);
+  border: 1px solid black;
+  border-radius: 45px;
+  box-shadow: 0 8px 2px -2px black;
+
+  &_header {
+    display: flex;
+
+    div {
+      align-self: flex-end;
+      margin-left: toRem(20);
+      margin-right: toRem(10);
+      h4 {
+        @include typography(h4);
+      }
+      span {
+        @include typography(p);
+      }
+    }
+    a {
+      background-color: black;
+      border-radius: 100%;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+    }
+  }
+
+  hr {
+    border-color: black;
+    margin: toRem(28) 0;
+  }
+
+  &_description {
+    @include typography(p);
+  }
+}
