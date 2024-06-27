@@ -82,6 +82,9 @@ const Team = () => {
           />
         ))}
       </div>
+      <div>
+        <button className={styles.team_btn}>See all team</button>
+      </div>
     </section>
   );
 };

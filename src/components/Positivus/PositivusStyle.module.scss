@@ -279,6 +279,14 @@
     grid-template-columns: repeat(3, 1fr);
     gap: toRem(40);
   }
+
+  &_btn {
+    display: block;
+    margin-top: toRem(40);
+    margin-left: auto;
+    @include typography(regular, #ffffff);
+    @include basebtn();
+  }
 }
 
 .employee {
@@ -320,5 +328,49 @@
 
   &_description {
     @include typography(p);
+  }
+}
+
+.testimonials {
+  padding: 0 toRem(100) 0 toRem(100);
+
+  &_carousel {
+    margin-top: toRem(80);
+    background-color: $color-primary-black;
+    padding: toRem(80) 0 toRem(64) 0;
+    border-radius: 45px;
+    /*  display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+
+  &_quotes {
+    display: flex;
+    justify-content: center;
+  }
+
+  &_quote {
+    width: 50%;
+  }
+
+  &_text {
+    padding: toRem(48) toRem(52);
+    border: 1px solid $color-primary-green;
+    border-radius: 45px;
+    @include typography(p, #ffffff);
+  }
+
+  &_person {
+    margin: toRem(30) auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &_author {
+    @include typography(h4, $color-primary-green);
+  }
+  &_position {
+    @include typography(p, #ffffff);
   }
 }
